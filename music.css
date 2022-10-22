@@ -1,0 +1,399 @@
+html , body{
+	background-image: linear-gradient(black,#0e0e50);
+}
+body{
+	margin : 0px ;
+}
+#body-header{
+	height: 100vh;
+	width: 100vw;
+}
+.navbar{
+	position: fixed !important;
+	z-index: 100;
+	width: 100% !important;
+}
+.border-remove{
+	border: none !important ;
+}
+.navtab-customize{
+	color: grey !important; 
+}
+#songs{
+	display: flex;
+	margin-top: -90vh ;
+}
+.playlist-section{
+	position: relative;
+	height: 90vh;
+	width: 30vw;
+}
+.playlist-section h1{
+	color: white;
+	font-weight: 700;
+	font-size: 35px;
+	padding: 3rem;
+	pad-left: 3rem;
+}
+.playlist-name{
+	margin-left: 1rem;
+	padding: 1.5rem;
+	padding-bottom: 1rem;
+	font-size: 25px;
+	color: white;
+	font-family: Poppins , sans-serif;
+}
+.playlist-list{
+	margin-left: 1rem;
+	color: grey;
+	padding: 1rem;
+	padding-left: 0.5rem;
+	padding-top: 0.5rem;
+}
+.padding-all{
+	padding: 0.3rem;
+}
+.playlist:hover{
+	color: aqua;
+}
+.last-listening:hover{
+	color: aqua;
+}
+.recommemded:hover{
+	color: aqua;
+}
+.playlist-songs{
+	position: absolute;
+	height: 60vh;
+	max-height: 58vh;
+	width: 30vw;
+	top: 22%;
+	overflow: scroll;
+}
+.gaana{
+	margin-left: 1rem;
+	color: white;
+	font-family:Poppins , sans-serif;
+	font-weight: 700;
+	list-style: none;
+}
+.song2 button:hover{
+	transform: scale(1.2);
+}
+.name{
+	color: grey;
+	font-weight: 200;
+	font-size: 12px;
+	margin-left: 6rem;
+	margin-top: -1rem;
+}
+.padding-ganna{
+	padding: 0.3rem;
+}
+.song-name{
+	margin-left: 6rem;
+	margin-top: -3rem;
+}
+.playlist-button{
+	margin-left: 15rem;
+	color: #190e5c;
+	background-color: white;
+	border-radius:30px ;
+	font-size: 15px;
+}
+.display-songs{
+	height:80vh;
+	width: 60vw;
+	padding-left: 8rem;
+	padding-top: 1rem;
+}
+.popular-artists-name{
+	padding: 1rem;
+	padding-top: 3rem;
+	font-size: 25px;
+	color: white;
+	font-family: Poppins , sans-serif;
+	font-weight: 500;
+}
+.artists-list{
+	list-style: none;
+	padding-left: 1rem;
+	margin: 0px;
+}
+.artists-list li{
+	display: inline-block;
+	margin:10px 14px 20px 0px;
+}
+.artists-list li img{
+	border-radius: 100px;
+	opacity: 0.7;
+}
+.artists-list li img:hover{
+	opacity: 1;
+}
+.artists-name{
+	color: white;
+	text-align: center;
+	padding-top: 7px;
+}
+section:nth-child(2n){
+	background-image: linear-gradient(#0e0e50,black);
+}
+section:nth-child(2n+1){
+	background-image: linear-gradient(black,#0e0e50);
+}
+.song-categories{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-left: 3rem;
+	margin-right: 3rem;
+}
+.enlarge-img{
+	height: 200px;
+	width: 300px;
+	margin: 1rem;
+	overflow:hidden;
+}
+.song-categories img{
+	opacity: 0.7;
+	transition: transform 0.4s ease;
+    transform-origin: 50% 50%;
+    z-index: 1;
+}
+.song-categories img:hover{
+	transform: scale(1.2);
+}
+.song-categories p{
+	position: absolute;
+	color: white;
+	font-size: 30px;
+	font-weight: 700;
+	z-index: 10;
+	text-align: center;
+	transform: translate(70%,170%);
+}
+.song-divider{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-top: 2rem;
+}
+.song{
+	height: 50vh;
+	width: 18.5vw;
+	border:1px grey solid ;
+	border-radius: 2rem;
+	background-image: linear-gradient(black,#080e2d);
+	margin-left: 1.2rem;
+}
+.song img{
+	margin-left: 2rem;
+	margin-top: 3rem;
+	border-radius: 5rem;
+}
+.song-divider p{
+	color: white;
+	text-align: center;
+	font-weight: 500;
+	font-size: 30px;
+	padding: 1rem;
+}
+.song-divider h2{
+	color: grey;
+	text-align: center;
+	font-weight: 200;
+	font-size: 15px;
+	margin-top: -2rem;
+}
+.slidecontainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+   width: 100%;
+  opacity: 0.7;
+  margin-left: 2.5rem;
+  margin-top: 3rem;
+  transition: opacity .2s;
+}
+.inner-slidecontainer{
+	width: 50%;
+	
+}
+.mute{
+	margin-top:-0.1rem;
+	margin-right: 0.5rem; 
+}
+.full{
+	margin-left: 10.5rem;
+	margin-top: -1.6rem;
+}
+.slidecontainer i{
+	color: white;
+}
+.slidecontainer:hover{
+	opacity: 1;
+}
+.music-control{
+	margin-left: 4rem;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	width: 100%;
+}
+.music-control button{
+	border-radius: 20px;
+	background-color: white;
+	margin: 0.5rem;
+}
+.music-control button:hover{
+	transform: scale(1.2);
+}
+body{
+	/*position: absolute;*/
+}
+
+.bottom-sec{
+	width: 100%;
+	height: 9vh;
+	background-color: black;
+	position: fixed;
+	top: 91%;
+	z-index: 1;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	opacity: 0;
+
+}
+.bottom-left{
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 25rem;
+}
+.bottom-name{
+	height: 5rem;
+	width: 35%;
+	display: flex;
+	flex-direction: column;
+	margin-left: 2rem;
+}
+.bottom-song{
+	height: 20%;
+	color: white;
+	font-size: 25px;
+	font-family: 'Poppins' , sans-serif;
+	font-weight: 700;
+	width: 15rem;
+	margin-top: 0.5rem;
+
+}
+.bottom-img{
+	border: 2px solid white;
+	height:55px;
+	width: 55px;
+	margin-left:-2rem ;
+	margin-top: 3%;
+}
+
+.bottom-img img{
+	height: 100%;
+	width: 100%;
+}
+
+
+.bottom-singer{
+	height: 100%;
+	width: 15rem;
+	color: gray;
+	font-weight: 500;
+	font-size: 15px;
+	font-family: 'Poppins' , sans-serif;
+	/*margin-top:-5rem ;*/
+}
+.fav{
+	color: white;
+	font-size: 30px;
+	margin-top: 1rem;
+	margin-left: 5rem;
+}
+.music-btn{
+	margin-left: -10rem;
+	margin-top: 0.6%;
+	height: 100%;
+	width: 40%;
+	text-align: center;
+}
+.music-btn button{
+	width: 10%;
+	border-radius: 20px;
+	font-size: 20px;
+}
+.music-timer{
+	margin-top:-0.3rem ;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.music-timer input{
+	width: 80%;
+	height: 2px;
+	margin-top: 0.8rem;
+}
+.music-timer p{
+	color: white;
+}
+.vol-sec{
+	height: 100%;
+	width: 20%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-right: -10%;
+	justify-content: space-around;
+}
+.volume-button{
+	font-size: 25px;
+	color: white;
+	margin-left: -5rem;
+	margin-top: 6%;
+}
+.volume-range{
+	width: 100%;
+	margin-left: -5%;
+}
+.volume-range input{
+	width: 80%;
+	margin-top: 10%;
+	
+}
+.sample{
+	height: 100vh;
+	width: 100vw;
+}
+.sample h1{
+	color: white;
+	font-size: 40px;
+	font-weight: 700;
+	padding:3rem;
+}
+.es{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.written-text{
+	/*width: 80%;*/
+}
+.es1 p{
+	 color: white;
+	 font-size: 20px;
+	 font-weight:700 ;
+	 margin-left:1rem ;
+	 margin-top:0.5rem ;
+}

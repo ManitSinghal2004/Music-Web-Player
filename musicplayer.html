@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel = "stylesheet" type = "text/css" href = "music.css">
+	<!-- For CSS only -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+	
+	<!-- Font-Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+	<!-- Animation -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<title>Music Player</title>
+</head>
+<body>
+	<header id = "body-header">
+		<nav class="navbar navbar-expand-lg navbar-dark nav-opacity" style="background-color: #000000;">
+		  <div class="container-fluid ">
+		    <a class="navbar-brand" href="#">
+		    	<span>
+		    		<i class="fa-solid fa-headphones"></i>
+		    	</span>
+		    	<span class="navbar-brand mb-0 h1">
+		    		Music Studio
+		    	</span>
+		    </a>
+		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		      <span class="navbar-toggler-icon"></span>
+		    </button>
+		    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+		        <li class="nav-item">
+		          <a class="nav-link active" aria-current="page" href="#">Home</a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="#">Favorites</a>
+		        </li>
+		        <li class="nav-item dropdown">
+		          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+		            Your Library
+		          </a>
+		          <ul class="dropdown-menu">
+		            <li><a class="dropdown-item" href="#">Playlists</a></li>
+		            <li><a class="dropdown-item" href="#">Podcasts</a></li>
+		            <li><a class="dropdown-item" href="#">Artists</a></li>
+		            <li><a class="dropdown-item" href="#">Albums</a></li>
+		          </ul>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link disabled">Live Music</a>
+		        </li>
+		      </ul>
+		      <form class="d-flex" role="search">
+		        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+		        <button class="btn btn-outline-light" type="submit">Search</button>
+		      </form>
+		    </div>
+		  </div>
+		</nav>
+	</header>
+
+
+
+
+	<div class="bottom-sec">
+			<div class="bottom-left">
+				<div class="bottom-img">
+					<img src="">
+				</div>
+				<div class="bottom-name">
+					<p class="bottom-song">
+						
+					</p>
+					<p class="bottom-singer">
+						
+					</p>
+				</div>
+				<div class="fav">
+					<i class="fa-regular fa-heart"></i>
+				</div>
+			</div>
+			
+			
+			
+			<div class="music-btn">
+				<button><i class="fa-solid fa-backward-step"></i></button>
+				<button class="play-btn"><i class="fa-solid fa-play"></i></button>
+				<button><i class="fa-solid fa-forward-step"></i></button>
+				<div class="music-timer">
+					<p class="start">00::00</p>
+					<input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+					<p class="end">00::00</p>
+				</div>		
+			</div>
+			<div class="vol-sec">
+				<div class="volume-button">
+					<i class="fa-solid fa-volume-high "></i>
+				</div>
+				<div class="volume-range">
+					<input type="range" min="1" max="100" value="50" class="vol-slider" id="myRangeVol">
+				</div>
+			</div>
+	</div>
+	
+
+
+
+
+	<section id = "songs">
+		<div class = "playlist-section">
+			<nav>
+			  <div class="nav nav-tabs border-remove" id="nav-tab" role="tablist">
+			    <button class="nav-link active navtab-customize" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Playlist</button>
+			    <button class="nav-link navtab-customize" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Last Listening</button>
+			    <button class="nav-link navtab-customize" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Recommended</button>
+			  </div>
+			</nav>
+			<h1>Music without Limits</h1>
+			<div class="tab-content" id="nav-tabContent">
+			  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+			  	<div class = "playlist-songs">
+					<ol class= "gaana">
+						<li class = "kesariya padding-gaana">
+							<div class="song2">
+								<span>01</span>
+								<img src="https://i.scdn.co/image/ab67616d0000b273c08202c50371e234d20caf62" alt="error" height="60px" width="60px" class="padding-all">
+								<audio class="song-audio" src="kesariya.mpeg"></audio>
+								<button class="playlist-button"><i class="fa-solid fa-play"></i></button>
+								<p class="song-name">Kesariya</p>
+								<p class="name">Arijit Singh</p>
+							</div>
+						</li>
+						<li class = "dariya padding-ganna">
+							<div class="song2">
+								<span>02</span>
+								<img src="https://dumkhum.com/wp-content/uploads/2016/09/baar-baar-dekho-poster-.jpg" alt="error" height="60px" width="60px" class="padding-all">
+								<audio class="song-audio" src="dariya.mpeg"></audio>
+								<button class="playlist-button"><i class="fa-solid fa-play"></i></button>
+								<p class="song-name">Dariya</p>
+								<p class="name">Arko</p>
+							</div>
+						</li>
+						<li class = "sau-aasman padding-ganna">
+							<div class="song2">
+								<span>03</span>
+								<img src="https://st1.bollywoodlife.com/wp-content/uploads/photos/katrina-kaif-outshines-co-star-sidharth-malhotra-in-sau-aasmaan-song-of-baar-baar-dekho-201608-769677.jpg?impolicy=Medium_Resize&w=1200&h=1200" alt="error" height="60px" width="60px" class="padding-all">
+								<audio class="song-audio" src="SauAasmaan.mpeg"></audio>
+								<button class="playlist-button"><i class="fa-solid fa-play"></i></button>
+								<p class="song-name"> Sau Aasman </p>
+								<p class="name">Armaan Malik, Neeti Mohan</p>
+							</div>
+						</li>
+						<li class = "rang-saari padding-ganna">
+							<div class="song2">
+								<span>04</span>
+								<img src="https://im.idiva.com/content/2022/Jun/JugJugg-Jeeyo-Remakes-Rangi-Saari-Making-Us-Crave-The-Originality-Of-The-Early-2000s-_thumb_629dd13e71625.jpg" alt="error" height="60px" width="60px" class="padding-all">
+								<audio class="song-audio" src="RangSaari.mpeg"></audio>
+								<button class="playlist-button"><i class="fa-solid fa-play"></i></button>
+								<p class="song-name"> Rang saari</p>
+								<p class="name">Kanishk Seth, Kavita seth</p>
+							</div>
+						</li>
+						<li class = "hangover padding-ganna">
+							<div class="song2">
+								<span>05</span>
+								<img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/201407/salman-khan_650_070414064836.jpg" alt="error" height="60px" width="60px" class="padding-all">
+								<audio class="song-audio" src="Hangover.mpeg"></audio>
+								<button class="playlist-button"><i class="fa-solid fa-play"></i></button>
+								<p class="song-name">Hangover</p>
+								<p class="name">Salman Khan</p>
+							</div>
+						</li>
+						<li class = "hangover padding-ganna">
+							<div class="song2">
+								<span>06</span>
+								<img src="https://snoidcdnems04.cdnsrv.jio.com/c.saavncdn.com/562/I-Love-You-Hindi-2019-20190924060929-500x500.jpg" alt="error" height="60px" width="60px" class="padding-all">
+								<audio class="song-audio" src="ILY.mpeg"></audio>
+								<button class="playlist-button"><i class="fa-solid fa-play"></i></button>
+								<p class="song-name">I love you</p>
+								<p class="name">Akull</p>
+							</div>
+						</li>
+						<li class = "hangover padding-ganna">
+							<div class="song2">
+								<span>06</span>
+								<img src="https://snoidcdnems04.cdnsrv.jio.com/c.saavncdn.com/562/I-Love-You-Hindi-2019-20190924060929-500x500.jpg" alt="error" height="60px" width="60px" class="padding-all">
+								<audio class="song-audio" src="ILY.mpeg"></audio>
+								<button class="playlist-button"><i class="fa-solid fa-play"></i></button>
+								<p class="song-name">I love you</p>
+								<p class="name">Akull</p>
+							</div>
+						</li>
+					</ol>
+				</div>
+			  </div>
+			  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+			  	<div class = "playlist-songs">
+					<ol class= "gaana">
+						<li class = "kesariya padding-gaana">
+							<div class="song2">
+								<span>01</span>
+								<img src="https://c-fa.cdn.smule.com/rs-s81/arr/45/97/90ca1c69-970c-4152-bd81-39b68457f8b2_1024.jpg" width="60px" class="padding-all">
+								<audio class="song-audio" src="KhudaJaane.mpeg"></audio>
+								<button class="playlist-button"><i class="fa-solid fa-play"></i></button>
+								<p class="song-name">Khuda Jaane</p>
+								<p class="name">KK</p>
+							</div>
+						</li>
+						<li class = "dariya padding-ganna">
+							<div class="song2">
+								<span>02</span>
+								<img src="https://i1.sndcdn.com/artworks-TEG5eDh15uk1-0-t500x500.png" alt="error" height="60px" width="60px" class="padding-all">
+								<audio class="song-audio" src="dariya.mpeg"></audio>
+								<button class="playlist-button"><i class="fa-solid fa-play"></i></button>
+								<p class="song-name">Saari Umar</p>
+								<p class="name">Harish Budhwani</p>
+							</div>
+						</li>
+						<li class = "sau-aasman padding-ganna">
+							<div class="song2">
+								<span>03</span>
+								<img src="https://sdlhivkcdnems02.cdnsrv.jio.com/c.saavncdn.com/148/Nain-Ta-Heere-From-Jugjugg-Jeeyo-Hindi-2022-20220616121005-500x500.jpg" alt="error" height="60px" width="60px" class="padding-all">
+								<audio class="song-audio" src="NainTaHeere.mpeg"></audio>
+								<button class="playlist-button"><i class="fa-solid fa-play"></i></button>
+								<p class="song-name"> Nain Ta Heere </p>
+								<p class="name">Guru Randhawa, Asees Kaur</p>
+							</div>
+						</li>
+						<li class = "rang-saari padding-ganna">
+							<div class="song2">
+								<span>04</span>
+								<img src="https://im.idiva.com/content/2022/Jun/JugJugg-Jeeyo-Remakes-Rangi-Saari-Making-Us-Crave-The-Originality-Of-The-Early-2000s-_thumb_629dd13e71625.jpg" alt="error" height="60px" width="60px" class="padding-all">
+								<audio class="song-audio" src="RangSaari.mpeg"></audio>
+								<button class="playlist-button"><i class="fa-solid fa-play"></i></button>
+								<p class="song-name"> Rang saari</p>
+								<p class="name">Kanishk Seth, Kavita seth</p>
+							</div>
+						</li>
+						<li class = "hangover padding-ganna">
+							<div class="song2">
+								<span>05</span>
+								<img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/201407/salman-khan_650_070414064836.jpg" alt="error" height="60px" width="60px" class="padding-all">
+								<audio class="song-audio" src="Hangover.mpeg"></audio>
+								<button class="playlist-button"><i class="fa-solid fa-play"></i></button>
+								<p class="song-name">Hangover</p>
+								<p class="name">Salman Khan</p>
+							</div>
+						</li>
+						<li class = "hangover padding-ganna">
+							<div class="song2">
+								<span>06</span>
+								<img src="https://snoidcdnems04.cdnsrv.jio.com/c.saavncdn.com/562/I-Love-You-Hindi-2019-20190924060929-500x500.jpg" alt="error" height="60px" width="60px" class="padding-all">
+								<audio class="song-audio" src="ILY.mpeg"></audio>
+								<button class="playlist-button"><i class="fa-solid fa-play"></i></button>
+								<p class="song-name">I love you</p>
+								<p class="name">Akull</p>
+							</div>
+						</li>
+					</ol>
+				</div>
+			  </div>
+			  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">
+			  	<div class = "playlist-songs">
+					<ol class= "gaana">
+						<li class = "kesariya padding-gaana">
+							<div class="song2">
+								<span>01</span>
+								<img src="https://i.scdn.co/image/ab67616d0000b273c08202c50371e234d20caf62" alt="error" height="60px" width="60px" class="padding-all">
+								<audio class="song-audio" src="kesariya.mpeg"></audio>
+								<button class="playlist-button"><i class="fa-solid fa-play"></i></button>
+								<p class="song-name">Kesariya</p>
+								<p class="name">Arijit Singh</p>
+							</div>
+						</li>
+						<li class = "dariya padding-ganna">
+							<div class="song2">
+								<span>02</span>
+								<img src="https://dumkhum.com/wp-content/uploads/2016/09/baar-baar-dekho-poster-.jpg" alt="error" height="60px" width="60px" class="padding-all">
+								<audio class="song-audio" src="dariya.mpeg"></audio>
+								<button class="playlist-button"><i class="fa-solid fa-play"></i></button>
+								<p class="song-name">Dariya</p>
+								<p class="name">Arko</p>
+							</div>
+						</li>
+						<li class = "sau-aasman padding-ganna">
+							<div class="song2">
+								<span>03</span>
+								<img src="https://st1.bollywoodlife.com/wp-content/uploads/photos/katrina-kaif-outshines-co-star-sidharth-malhotra-in-sau-aasmaan-song-of-baar-baar-dekho-201608-769677.jpg?impolicy=Medium_Resize&w=1200&h=1200" alt="error" height="60px" width="60px" class="padding-all">
+								<audio class="song-audio" src="SauAasmaan.mpeg"></audio>
+								<button class="playlist-button"><i class="fa-solid fa-play"></i></button>
+								<p class="song-name"> Sau Aasman </p>
+								<p class="name">Armaan Malik, Neeti Mohan</p>
+							</div>
+						</li>
+						<li class = "rang-saari padding-ganna">
+							<div class="song2">
+								<span>04</span>
+								<img src="https://im.idiva.com/content/2022/Jun/JugJugg-Jeeyo-Remakes-Rangi-Saari-Making-Us-Crave-The-Originality-Of-The-Early-2000s-_thumb_629dd13e71625.jpg" alt="error" height="60px" width="60px" class="padding-all">
+								<audio class="song-audio" src="RangSaari.mpeg"></audio>
+								<button class="playlist-button"><i class="fa-solid fa-play"></i></button>
+								<p class="song-name"> Rang saari</p>
+								<p class="name">Kanishk Seth, Kavita seth</p>
+							</div>
+						</li>
+						<li class = "hangover padding-ganna">
+							<div class="song2">
+								<span>05</span>
+								<img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/201407/salman-khan_650_070414064836.jpg" alt="error" height="60px" width="60px" class="padding-all">
+								<audio class="song-audio" src="Hangover.mpeg"></audio>
+								<button class="playlist-button"><i class="fa-solid fa-play"></i></button>
+								<p class="song-name">Hangover</p>
+								<p class="name">Salman Khan</p>
+							</div>
+						</li>
+						<li class = "hangover padding-ganna">
+							<div class="song2">
+								<span>06</span>
+								<img src="https://snoidcdnems04.cdnsrv.jio.com/c.saavncdn.com/562/I-Love-You-Hindi-2019-20190924060929-500x500.jpg" alt="error" height="60px" width="60px" class="padding-all">
+								<audio class="song-audio" src="ILY.mpeg"></audio>
+								<button class="playlist-button"><i class="fa-solid fa-play"></i></button>
+								<p class="song-name">I love you</p>
+								<p class="name">Akull</p>
+							</div>
+						</li>
+					</ol>
+				</div>
+			  </div>
+			  
+			</div>
+
+		</div>
+
+		<div class = "display-songs">
+			<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+			  <div class="carousel-inner">
+			    <div class="carousel-item active" data-bs-interval="10000">
+			      <img src="https://a10.gaanacdn.com/gn_img/showcase/jBr3gLyWR1/Br3gm5QbR1/size_l_1662536030.webp" class="d-block w-100" alt="error" height = "400px">
+			    </div>
+			    <div class="carousel-item" data-bs-interval="2000">
+			      <img src="https://a10.gaanacdn.com/gn_img/showcase/XzVWRLKdqR/zVWRJ71Wdq/size_l_1658294455.webp" class="d-block w-100" alt="error" height = "400px">
+			    </div>
+			    <div class="carousel-item" data-bs-interval="3000">
+			      <img src="https://a10.gaanacdn.com/gn_img/showcase/qa4WEkqKP1/qa4WEkqKP1/size_l_1625943665.webp" alt="error" class="d-block w-100" height = "400px" >
+			    </div>
+			    <div class="carousel-item" data-bs-interval="4000">
+			      <img src="https://a10.gaanacdn.com/gn_img/showcase/81l3Me3rMx/1l3MZnPWrM/size_l_1651060182.webp" alt="error" class="d-block w-100" height = "400px" >
+			    </div>
+			    <div class="carousel-item">
+			      <img src="https://a10.gaanacdn.com/gn_img/showcase/MmqK5EKwRO/MmqK5XXbwR/size_l_1651817274.webp" class="d-block w-100" alt="error" height = "400px">
+			    </div>
+			  </div>
+			  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+			    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			    <span class="visually-hidden">Previous</span>
+			  </button>
+			  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+			    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+			    <span class="visually-hidden">Next</span>
+			  </button>
+			</div>
+			<div class="popular-artists">
+				<h1 class = "popular-artists-name">Popular Artists</h1>
+				<ul class = "artists-list">
+					<li>
+						<a href=""> <img src="https://assets-in.bmscdn.com/iedb/artist/images/website/poster/large/arijit-singh-1048083-24-03-2017-18-02-00.jpg" height="100px" width="100px"> </a>
+						<p class="artists-name">Arijit Singh</p>
+					</li>
+					<li>
+						<a href=""> <img src="https://i.scdn.co/image/ab6761610000e5eb115afe0eb88a13c222194e9b"height="100px" width="100px"> </a>
+						<p class="artists-name">Akull</p>
+					</li>
+					<li>
+						<a href=""> <img src="https://i.pinimg.com/736x/b6/aa/a4/b6aaa46c093b992ba1eb927b89a85fc7.jpg" height="100px" width="100px"> </a>
+						<p class="artists-name">Honey Singh</p>
+					</li>
+					<li>
+						<a href=""> <img src="https://akamai.sscdn.co/uploadfile/letras/fotos/3/1/0/e/310ea839bcca3d679f372cc665b14546.jpg" height="100px" width="100px"> </a>
+						<p class="artists-name">Anuv Jain</p>
+					</li>
+					<li>
+						<a href=""> <img src="https://i.scdn.co/image/c3c0d8fef119287088b2d96ac77d5661053fcafc" height="100px" width="100px"> </a>
+						<p class="artists-name">Mohit Chauhan</p>
+					</li>
+					<li>
+						<a href=""> <img src="https://yt3.ggpht.com/gvTmktbbATKSxt2cj5-K3TzYjsF3cr--2ZvjFEeNXsP0VcgzSsDXtndX5t3_TQmsHo8rQvaGIA=s900-c-k-c0x00ffffff-no-rj" height="100px" width="100px"> </a>
+						<p class="artists-name">Neha Kakkar</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<!-- <div class="bottom-sec">
+			<div class="bottom-left">
+				<div class="bottom-img">
+					<img src="">
+				</div>
+				<div class="bottom-name">
+					<p class="bottom-song">
+						
+					</p>
+					<p class="bottom-singer">
+						
+					</p>
+				</div>
+				<div class="fav">
+					<i class="fa-regular fa-heart"></i>
+				</div>
+			</div>
+			
+			
+			
+			<div class="music-btn">
+				<button><i class="fa-solid fa-backward-step"></i></button>
+				<button class="play-btn"><i class="fa-solid fa-play"></i></button>
+				<button><i class="fa-solid fa-forward-step"></i></button>
+				<div class="music-timer">
+					<p class="start">00::00</p>
+					<input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+					<p class="end">00::00</p>
+				</div>		
+			</div>
+			<div class="vol-sec">
+				<div class="volume-button">
+					<i class="fa-solid fa-volume-high "></i>
+				</div>
+				<div class="volume-range">
+					<input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+				</div>
+			</div>
+	</div>
+	 -->
+	<section id = "song-types">
+		<div class = "song-categories">
+			<div class = "enlarge-img" data-aos="zoom-in-down">
+				<div>
+					<p>Party</p>
+				</div>
+				<img src="https://media.istockphoto.com/photos/dancing-at-disco-picture-id535403859?k=20&m=535403859&s=612x612&w=0&h=vurca_yUrEj-VrDYsAejoEuS2h3YzrppFbxNq_kBZd0=" height="200px" width="350px">
+			</div>
+			<div class = "enlarge-img" data-aos="zoom-in-down">
+				<div>
+					<p >Electronic</p>
+				</div>
+				<img src="https://media.istockphoto.com/photos/console-desk-at-nightclub-picture-id611607148?b=1&k=20&m=611607148&s=612x612&w=0&h=RxpnJ-HVV7oml4aSZOYbJzrkQWRXvANFecqsDfZkjCU=" height="200px" width="350px">
+			</div>
+			<div class = "enlarge-img" data-aos="zoom-in-down"> 
+				<div>
+					<p >Road Trip</p>
+				</div>
+				<img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/roadtrip-1583526313.jpg" height="200px" width="350px">
+				
+			</div>
+			<div class = "enlarge-img" data-aos="zoom-in-down">
+				<div>
+					<p> EDM </p>
+				</div>
+				<img src="https://cdn2.fatsoma.com/media/W1siZiIsInB1YmxpYy8yMDIyLzQvMTUvMTIvMjUvMTgvOTU3LzEwOGYyNTBjLTkyYmItNGI4Yy04MjM1LWMyZGFhYTcxNmNhZS5qcGciXV0" height="200px" width="350px">
+			</div>
+			
+		</div>
+		<div class = "song-divider">
+			<div class="song" data-aos="zoom-in-down">
+				<img src="https://upload.wikimedia.org/wikipedia/en/8/80/Ed_Sheeran_Perfect_Single_cover.jpg" height="200px" width="200px">
+				<div>
+					<p class="perfect">Perfect</p>
+					<h2>Ed Sheeran</h2>
+					<div class="music-control">
+						<button><i class="fa-solid fa-backward-step"></i></button>
+
+						<audio class="song-audio" src="perfect.mpeg"></audio>
+						<button class="play-btn"><i class="fa-solid fa-play"></i></button>
+						
+						<button id = "forward"><i class="fa-solid fa-forward-step"></i></button>
+					</div>
+					<!-- <div class="slidecontainer">
+					  <div class="mute"><i class="fa-solid fa-volume-xmark"></i></div>
+					  <div class="inner-slidecontainer"><input type="range" min="1" max="100" value="50" class="slider" id="myRange"></div>
+					  <div class="full"><i class="fa-solid fa-volume-high "></i></div>
+					</div> -->
+				</div>
+			</div>
+			<div class="song" data-aos="zoom-in-down">
+				<img src="https://i.scdn.co/image/ab67616d0000b273abc40a559829c1a93b92c276" height="200px" width="200px">
+				<div>
+					<p>Safari</p>
+					<h2>Serena</h2>
+					<div class="music-control">
+						<button><i class="fa-solid fa-backward-step"></i></button>
+						<audio class="song-audio" src="safari.mpeg"></audio>
+						<button class="play-btn"><i class="fa-solid fa-play"></i></button>
+						<button><i class="fa-solid fa-forward-step"></i></button>
+					</div>
+					<!-- <div class="slidecontainer">
+					  <div class="mute"><i class="fa-solid fa-volume-xmark"></i></div>
+					  <div class="inner-slidecontainer"><input type="range" min="1" max="100" value="50" class="slider" id="myRange"></div>
+					  <div class="full"><i class="fa-solid fa-volume-high "></i></div>
+					</div> -->
+				</div>
+			</div>
+			<div class="song " data-aos="zoom-in-down">
+				<img src="https://c-fa.cdn.smule.com/rs-s35/arr/15/a0/4bd87e54-da45-47e2-91b5-1ff80a3cea08_1024.jpg" height="200px" width="200px">
+				<div>
+					<p>Night Changes</p>
+					<h2>One Direction</h2>
+					<div class="music-control">
+						<button><i class="fa-solid fa-backward-step"></i></button>
+						<audio class="song-audio" src="NightChanges.mpeg"></audio>
+						<button class="play-btn"><i class="fa-solid fa-play"></i></button>
+						<button><i class="fa-solid fa-forward-step"></i></button>
+					</div>
+					<!-- <div class="slidecontainer">
+					  <div class="mute"><i class="fa-solid fa-volume-xmark"></i></div>
+					  <div class="inner-slidecontainer"><input type="range" min="1" max="100" value="50" class="slider" id="myRange"></div>
+					  <div class="full"><i class="fa-solid fa-volume-high "></i></div>
+					</div> -->
+				</div>
+			</div>
+			<div class="song" data-aos="zoom-in-down">
+				<img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/20/Justin_Bieber_-_Boyfriend.jpg/220px-Justin_Bieber_-_Boyfriend.jpg" height="200px" width="200px">
+				<div>
+					<p>Boyfriend</p>
+					<h2>Justin Bieber</h2>
+					<div class="music-control">
+						<button><i class="fa-solid fa-backward-step"></i></button>
+						<audio class="song-audio" src="Boyfriend.mpeg"></audio>
+						<button class="play-btn"><i class="fa-solid fa-play"></i></button>
+						<button><i class="fa-solid fa-forward-step"></i></button>
+					</div>
+					<!-- <div class="slidecontainer">
+					  <div class="mute"><i class="fa-solid fa-volume-xmark"></i></div>
+					  <div class="inner-slidecontainer"><input type="range" min="1" max="100" value="50" class="slider" id="myRange"></div>
+					  <div class="full"><i class="fa-solid fa-volume-high "></i></div>
+					</div> -->
+				</div>
+			</div>
+			<div class="song" data-aos="zoom-in-down">
+				<img src="https://m.media-amazon.com/images/M/MV5BNmNmNGExNDctM2Q3MC00MTU5LTkyYzMtMzMyYmI2MTA3MjU3XkEyXkFqcGdeQXVyNjE0ODc0MDc@._V1_.jpg" height="200px" width="200px">
+				<div>
+					<p>Girls like you</p>
+					<h2>Maroon 5</h2>
+					<div class="music-control">
+						<button><i class="fa-solid fa-backward-step"></i></button>
+						<audio class="song-audio" src="GirlsLikeYou.mpeg"></audio>
+						<button class="play-btn"><i class="fa-solid fa-play"></i></button>
+						<button><i class="fa-solid fa-forward-step"></i></button>
+					</div>
+					<!-- <div class="slidecontainer">
+					  <div class="mute"><i class="fa-solid fa-volume-xmark"></i></div>
+					  <div class="inner-slidecontainer"><input type="range" min="1" max="100" value="50" class="slider" id="myRange"></div>
+					  <div class="full"><i class="fa-solid fa-volume-high "></i></div>
+					</div> -->
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="sample">
+		<div>
+			<h1>
+				Latest English Songs
+			</h1>
+			<div class="es">
+				<div class="es1">
+					<img src="https://upload.wikimedia.org/wikipedia/en/b/b0/Glass_Animals_-_Heat_Waves.png" height="200px" weight="200px" >
+					<div class="written-text">
+						<p>Heat waves</p>
+					</div>
+				</div>
+				<div class="es1">
+					<img src="https://upload.wikimedia.org/wikipedia/en/0/0f/Nicki_Minaj_-_Super_Freaky_Girl.png" height="200px" weight="200px" >
+					<div class="written-text">
+						<p>Super Freaky Girl</p>
+					</div>
+				</div>
+				<div class="es1">
+					<img src="https://upload.wikimedia.org/wikipedia/en/a/a6/Lewis_Capaldi_-_Someone_You_Loved.png" height="200px" weight="200px" >
+					<div class="written-text">
+						<p>Someone You Loved</p>
+					</div>
+					
+				</div>
+				<div class="es1">
+					<img src="https://images.genius.com/2fbec27ed130e90a155aef1ffa804bed.1000x1000x1.png" height="200px" weight="200px" >
+					<div class="written-text">
+						<p>I'm a Mess</p>
+					</div>
+					
+				</div>
+				<div class="es1">
+					<img src="https://i0.wp.com/zedpushup.com/wp-content/uploads/2019/10/maroon-5-memories-music-video.jpg?fit=630%2C630&ssl=1" height="200px" weight="200px" >
+					<div class="written-text">
+						<p>Memories</p>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+	<!-- JavaScript Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>
+	  AOS.init();
+	</script>
+</body>
+</html>
